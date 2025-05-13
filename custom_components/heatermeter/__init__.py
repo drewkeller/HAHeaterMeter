@@ -16,6 +16,9 @@ import voluptuous as vol
 from homeassistant.const import (
         CONF_HOST, CONF_PORT, CONF_API_KEY, CONF_SCAN_INTERVAL
     )
+from homeassistant.core import HomeAssistant
+from homeassistant.helpers.typing import ConfigType
+from homeassistant.helpers.discovery import load_platform
 
 DOMAIN = 'heatermeter'
 
@@ -37,7 +40,7 @@ ALARM_DEFAULT = '-190,-250,-1,-205,-100,-100,-100,-100'
 _LOGGER = logging.getLogger(__name__)
 
 
-def setup(hass, config):
+def setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up is called when Home Assistant is loading our component."""
     _LOGGER.debug("HeaterMeter init.py: config = %s", config[DOMAIN])
 
@@ -130,7 +133,7 @@ def setup(hass, config):
     hass.services.register(DOMAIN, 'set_alarms', handle_setalarms_api)
 
 
-    hass.helpers.discovery.load_platform('sensor', DOMAIN, {}, config)
+    load_platform(hass, 'sensor', DOMAIN, {}, config)
 
     # Return boolean to indicate that initialization was successfully.
     return True

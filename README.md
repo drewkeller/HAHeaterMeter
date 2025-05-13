@@ -12,7 +12,7 @@ HeaterMeter smoker controller integration for HA.
   If you prefer the legacy -1 values to represent a disabled alarm, you can find an updated script in: "legacy_update_heatermeter_input_numbers.yaml"
 
 ## Changes:
-- Fixed depreciated constants (TEMP_CELSIUS/TEMP_FAHRENHEIT) to UnitOfTemperature
+- Fixed deprecated constants (TEMP_CELSIUS/TEMP_FAHRENHEIT) to UnitOfTemperature
   - (legacy constants to be removed in 2025.1)
 - Negative Alarm values are sync'd (rather than displaying -1).
 - Updated YAML to include default values for INT and FLOAT values in templates.
@@ -36,6 +36,7 @@ HeaterMeter smoker controller integration for HA.
 - Lovelace Card Updates:
   * Now includes a card for setting the Set Point with a slider and 'Set' button.
   * Added history graph for the fan.
+- Fixed installation for 2024+, related to hass.helpers (see https://developers.home-assistant.io/blog/2024/03/30/deprecate-hass-helpers/)
 <br/>
 
 ## :heavy_check_mark: ToDo:
