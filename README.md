@@ -78,6 +78,8 @@ HeaterMeter smoker controller integration for HA.
 
 ## Getting started
 * Copy the 'heatermeter' folder to the Home Assistant config/custom_components/ directory.  
+  or add and download the repository:
+https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdrewkeller%2FHAHeaterMeter (temporarily using this repo to see if HACS will show it)
 
 [:top:](#bookmark_tabs-table-of-contents)
 <br/>
